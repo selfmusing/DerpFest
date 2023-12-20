@@ -1,1 +1,23 @@
+DerpFest | UNOFFICIAL ~ Violet by @selfmuser
+Build Date : 20-12-2023
+Device : Redmi Note 7 Pro ( Violet )
 
+Device Changelogs :
+• Charging LED Fixed
+• [Kernel] Merged 4.14.333 from Linux Stable
+• Upstream from Ancient Kernel 14 Standard ( No KernelSu )
+
+Source Changelogs : 
+- Merge QPR1 (aka December security patch)
+- Remove OOS style clear all button toggle due to QPR1 conflicts
+- Switch to Yaap's impl for battery icon customizations
+- Switch to AOSP themepicker to fix wallpaper apply button and other small issues
+- Add DerpFest Updater (based on Lineage updater)
+- Fix for Faceunlock needing a reboot to work after registering a face model
+- Add window ignore secure feature
+- Add option to display data disabled indicator icon
+- DerpSpace: Add a secure section to quick settings
+- DerpLauncher: Import Lawnicons
+- Update Gramophone prebuilt
+- New QS style added
+- Fixed Lockscreen Clock styles crashes
