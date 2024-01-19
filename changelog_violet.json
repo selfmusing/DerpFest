@@ -1,12 +1,11 @@
 DerpFest | UNOFFICIAL ~ Violet by @selfmuser
-Build Date : 20-12-2023
+Build Date : 20-01-2024
 Device : Redmi Note 7 Pro ( Violet )
 
 Device Changelogs :
-• Charging LED Fixed
-• [Kernel] Merged 4.14.333 from Linux Stable
-• Upstream from Ancient Kernel 14 Standard ( No KernelSu )
-- Set correct manufacturer
+- [Kernel] Merged 4.14.336 from Linux Stable
+- Upstream from Ancient Kernel 14 Standard
+- NO MEME CAM 😭 ( Unable to make a successful Legacy build due to less partition space )
 - Drop HIDL BtAudio
 - init: audio HAL: Enable RT priority inheritance
 - Keep building health HIDL interface lib in vendor
@@ -73,16 +72,25 @@ Revert "- Don't latch unsignal buffers"
 
 
 Source Changelogs : 
-- Merge QPR1 (aka December security patch)
-- Remove OOS style clear all button toggle due to QPR1 conflicts
-- Switch to Yaap's impl for battery icon customizations
-- Switch to AOSP themepicker to fix wallpaper apply button and other small issues
-- Add DerpFest Updater (based on Lineage updater)
-- Fix for Faceunlock needing a reboot to work after registering a face model
-- Add window ignore secure feature
-- Add option to display data disabled indicator icon
-- DerpSpace: Add a secure section to quick settings
-- DerpLauncher: Import Lawnicons
-- Update Gramophone prebuilt
-- New QS style added
-- Fixed Lockscreen Clock styles crashes
+- Merge January security patch
+- Add Quick unlock 
+- Settings: Add a new fragment in system for other options (move few dev options there and add battery stats viewer, sensor tile toggle)
+- DerpLauncher: Use folder background color for QSB
+- DerpLauncher: Introduce faster status bar expansion
+- Add DerpSpace QS tile
+- Add WiFi standard icon switch
+- Let app lock use face unlock
+- FaceUnlock: Vibrate on successful authentication
+- PixelPropsUtils: Do not spoof ASI
+- Enable new privacy dialogue
+- Hide ADB and developer setting enable status by default
+- Enable freeform/multiple windows feature by default
+- Improve ripple animation color
+- DerpSpace: Fix data icon style default drawables
+- DerpLauncher: Add option to control wallpaper zooming
+- DerpLauncher: Exclude overview lens activity from recents
+- DerpLauncher: Increment max number of saved recent apps thumbnails
+- DerpLauncher: allow copying app version
+- DerpLauncher: Prevent NPE with taskbar drag controller
+- DerpLauncher: UI elements color palette changes
+- DerpLauncher: Don't open PiP when freeform is opened from recent
