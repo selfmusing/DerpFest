@@ -6,6 +6,71 @@ Device Changelogs :
 • Charging LED Fixed
 • [Kernel] Merged 4.14.333 from Linux Stable
 • Upstream from Ancient Kernel 14 Standard ( No KernelSu )
+- Set correct manufacturer
+- Drop HIDL BtAudio
+- init: audio HAL: Enable RT priority inheritance
+- Keep building health HIDL interface lib in vendor
+- Move to QTI health AIDL service
+- Build default health HIDL recovery impl
+- Switch to QTI health implementation
+- Enable Battery Health
+- Disable SF composition prediction model
+- Update wifi overlay from MIUI
+- overlay: Increase minimum brightness level
+- Use FUSE passthrough by default
+- prop: Disable SF client composition cache
+- prop: Import more surface flinger flags * Fore better smoothness and to eliminate lags * QS animation, app opening & app switching seem to have improved.
+- gps: Silence all warnings
+- Don't pin launcher app in memory
+- Exclude lineage-sdk overlays from RRO
+- overlay: Adjust overlays for recently added light capability  * Led capability LIGHTS_ADJUSTABLE_BATTERY_LED_BRIGHTNESS was recently    added to the Lineage SDK. Declare such capability, since our targets    don't have RGB battery leds, but the lights HAL supports brightness    control via the alpha channel for battery and notification lights.
+- vendor.prop: Set debug.sf.auto_latch_unsignaled to 0.
+Revert "- Don't latch unsignal buffers"
+- overlay: Add available Color Modes
+- Replace isolated_app with isolated_app_all
+- Disable display refresh rate override
+- overlay: Enable subtle tick vibration when revealing shelf
+- overlay: Increase more minimum brightness level
+- Enable Smart Pixels
+- Build lineage health HAL
+- overlay: Show memory usage in app info
+- Enabe system info
+- add nodes to hide Magisk in banking apps
+- props: Switch to SkiaGL Threaded
+- Disable continuous transaction tracing on all build types
+- parts: Refactor ClearSpeakerFragment code
+- AlwaysOnDisplayAvailable
+- wifi: Configure correct overlay configuration.
+- Set block_binder_thread_on_incoming_calls prop
+- Don't use proximity sensor for DozeSensors https://github.com/Evolution-X/frameworks_base/blob/b19988be6152bfd3b4d4a37a74323db3d0a21877/packages/SystemUI/res/values/evolution_config.xml#L52
+- Set default Settings.Global.DEVICE_NAME according to MIUI MIUI uses ro.product.marketname for default device name.
+- set ro.sf.lcd_density=420
+- overlays: Configure default light sensor type  - Fixes adaptive/auto brightness after r35 merge
+- parts: Update clear speaker audio using DTMF + Chirp tones
+- Unpin updatable-media from memory
+- overlay: Add physical button/sensor locations
+- Address wcnss denials
+- overlay: Disable multi color battery LED - We have single color LED , So disable it to hide LED color customizations
+- overlay: Make the UI smoother
+- VioletParts: Redesign FPS Info
+- Disable slow blur effect to avoid laggish blur effect
+- Disable TTS force stop warning
+- parts: Adapt to S style for ClearSpeaker
+- parts: Fix Clear Speaker IllegalStateException
+- parts: Adapt clear speakers to S style
+- parts: Add headphones warning for clear speaker
+- parts: Update clear speaker audio from MIUI 12
+- parts: Implement Clear Speaker
+- parts: Disable startup provider
+- init: rm package cache on early boot * Because Android won't do it on a dirty flash so certain elements will be broken if something is changed in UI.
+- increase 5 GHz network signal tolerance
+- parts: Avoid unsafe boot completed receiver
+- Set VENDOR_SECURITY_PATCH To PLATFORM
+- Add speed preopt for Launcher/Settings/SystemUI
+- props: Enable Qualcomm TrueWireless™ Stereo audio
+- Define sysfs_battery_supply type
+- Migrate to restructured sepolicy_vndr
+
 
 Source Changelogs : 
 - Merge QPR1 (aka December security patch)
