@@ -1,75 +1,77 @@
 DerpFest | UNOFFICIAL ~ Violet by @selfmuser
-Build Date : 19-01-2024
+Build Date : 26-01-2024
 Device : Redmi Note 7 Pro ( Violet )
 
 Device Changelogs :
 - [Kernel] Merged 4.14.336 from Linux Stable
-- Upstream from Ancient Kernel 14 Standard
-- NO MEME CAM 😭 ( Unable to make a successful Legacy build due to less partition space )
+- Upstream from Perf Kernel 14 DSP
+- Added MIUI Cam prebuilt
+- overlay: Add config_batteryChargeCycles node
 - Drop HIDL BtAudio
 - init: audio HAL: Enable RT priority inheritance
-- Keep building health HIDL interface lib in vendor
-- Move to QTI health AIDL service
-- Build default health HIDL recovery impl
-- Switch to QTI health implementation
-- Enable Battery Health
+- Pretend to be launched with dynamic partitions
+- rootdir: Add init.xiaomi.rc
+- Enable System Info
+- Enable Battery Health & Add sysfs nodes
+- Switch to jemalloc for libc
+- Use jemalloc to fix camera
+- Remove odex/oat files from pinner list.
+- AlwaysOnDisplayAvailable Signed-off-by: kibria5 <mdkibria687@gmail.com>
+- Move qti_whitelist.xml to /system_ext
+- parts: Disable startup provider
+- Fix Safetynet
+- Retrofit Dynamic Partitions
+- Use FUSE passthrough by default
+- Enable casefolding support on userdata
+- Force device to treat 170M as sRGB in SF
+- Replace isolated_app with isolated_app_all
+- Enable Fbev2 Encryption
+- Fix BOARD_FLASH_BLOCK_SIZE
+- Build and enable fastbootd
+- Added NGA & Google Recorder, Fixed GMS
+- Fix xml parser error
+- parts: Fix compilation for QPR1 merge
+- Set correct manufacturer
 - Disable SF composition prediction model
 - Update wifi overlay from MIUI
+- wifi: Configure correct overlay configuration.
 - overlay: Increase minimum brightness level
-- Use FUSE passthrough by default
-- prop: Disable SF client composition cache
-- prop: Import more surface flinger flags * Fore better smoothness and to eliminate lags * QS animation, app opening & app switching seem to have improved.
+- prop: Disable SF client composition cache - Disable SF client composition cache. Helps with framework client target fence management. - Disable SF composition cache improves system smoothness and fix issues like lags when media output is showed on qs panel - Move to vendor
 - gps: Silence all warnings
 - Don't pin launcher app in memory
-- Exclude lineage-sdk overlays from RRO
-- overlay: Adjust overlays for recently added light capability  * Led capability LIGHTS_ADJUSTABLE_BATTERY_LED_BRIGHTNESS was recently    added to the Lineage SDK. Declare such capability, since our targets    don't have RGB battery leds, but the lights HAL supports brightness    control via the alpha channel for battery and notification lights.
-- vendor.prop: Set debug.sf.auto_latch_unsignaled to 0.
-Revert "- Don't latch unsignal buffers"
-- overlay: Add available Color Modes
-- Replace isolated_app with isolated_app_all
-- Disable display refresh rate override
-- overlay: Enable subtle tick vibration when revealing shelf
-- overlay: Increase more minimum brightness level
-- Enable Smart Pixels
-- Build lineage health HAL
+- Add Color modes, Increase more min. brightness level & Enable Smart pixels
 - overlay: Show memory usage in app info
-- Enabe system info
-- add nodes to hide Magisk in banking apps
-- props: Switch to SkiaGL Threaded
 - Disable continuous transaction tracing on all build types
 - parts: Refactor ClearSpeakerFragment code
-- AlwaysOnDisplayAvailable
-- wifi: Configure correct overlay configuration.
-- Set block_binder_thread_on_incoming_calls prop
-- Don't use proximity sensor for DozeSensors https://github.com/Evolution-X/frameworks_base/blob/b19988be6152bfd3b4d4a37a74323db3d0a21877/packages/SystemUI/res/values/evolution_config.xml#L52
-- Set default Settings.Global.DEVICE_NAME according to MIUI MIUI uses ro.product.marketname for default device name.
-- set ro.sf.lcd_density=420
-- overlays: Configure default light sensor type  - Fixes adaptive/auto brightness after r35 merge
 - parts: Update clear speaker audio using DTMF + Chirp tones
-- Unpin updatable-media from memory
-- overlay: Add physical button/sensor locations
 - Address wcnss denials
-- overlay: Disable multi color battery LED - We have single color LED , So disable it to hide LED color customizations
-- overlay: Make the UI smoother
-- VioletParts: Redesign FPS Info
-- Disable slow blur effect to avoid laggish blur effect
-- Disable TTS force stop warning
+- Enable zygote critical window
 - parts: Adapt to S style for ClearSpeaker
 - parts: Fix Clear Speaker IllegalStateException
 - parts: Adapt clear speakers to S style
 - parts: Add headphones warning for clear speaker
 - parts: Update clear speaker audio from MIUI 12
 - parts: Implement Clear Speaker
-- parts: Disable startup provider
+- parts: Avoid unsafe boot completed receiver
+- Add speed preopt for Launcher/Settings/SystemUI
+- prop: Import more surface flinger flags * Fore better smoothness and to eliminate lags * QS animation, app opening & app switching seem to have improved.
+- Disable display refresh rate override
+- Update Clang version to 18.0.0
+- overlay: Enable subtle tick vibration when revealing shelf
+- add nodes to hide Magisk in banking apps
+- props: Switch to SkiaGL Threaded
+- Don't use proximity sensor for DozeSensors https://github.com/Evolution-X/frameworks_base/blob/b19988be6152bfd3b4d4a37a74323db3d0a21877/packages/SystemUI/res/values/evolution_config.xml#L52
+- Set block_binder_thread_on_incoming_calls prop
+- Fix slow blurs, TTS fc warns & light sensor string
+- overlay: Add physical button/sensor locations
+- overlay: Disable multi color battery LED
+- VioletParts: Redesign FPS Info
 - init: rm package cache on early boot * Because Android won't do it on a dirty flash so certain elements will be broken if something is changed in UI.
 - increase 5 GHz network signal tolerance
-- parts: Avoid unsafe boot completed receiver
-- Set VENDOR_SECURITY_PATCH To PLATFORM
-- Add speed preopt for Launcher/Settings/SystemUI
 - props: Enable Qualcomm TrueWireless™ Stereo audio
+- Add a system property for System UI compiler filter.
 - Define sysfs_battery_supply type
 - Migrate to restructured sepolicy_vndr
-
 
 Source Changelogs : 
 - Merge January security patch
@@ -94,3 +96,4 @@ Source Changelogs :
 - DerpLauncher: Prevent NPE with taskbar drag controller
 - DerpLauncher: UI elements color palette changes
 - DerpLauncher: Don't open PiP when freeform is opened from recent
+AND MORE : 
